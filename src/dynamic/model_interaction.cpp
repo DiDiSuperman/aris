@@ -15,7 +15,6 @@
 #include "aris/dynamic/model.hpp"
 
 namespace aris::dynamic{
-
 	auto Interaction::prtNameM()const->std::string { return prt_name_M_; }
 	auto Interaction::setPrtNameM(std::string_view name)->void { prt_name_M_ = name; }
 	auto Interaction::prtNameN()const->std::string { return prt_name_N_; }
@@ -423,7 +422,7 @@ namespace aris::dynamic{
 		s_pm_dot_v3(*makJ()->pm(), imp_->vp_, vp_in_ground);
 		s_inv_pm_dot_v3(*makI()->pm(), vp_in_ground, vp_in_makI);
 
-		s_va(3, vp_in_makI, cv);
+		s_vc(3, vp_in_makI, cv);
 
 		// 转动所添加的 cv //
 		cv[3] = imp_->vp_[3];

@@ -99,7 +99,6 @@ namespace aris::dynamic
 		auto cf() const noexcept->const double*;
 		auto setCf(const double *cf) noexcept->void;
 
-
 		virtual ~Constraint();
 		explicit Constraint(const std::string &name = "constraint", Marker *makI = nullptr, Marker *makJ = nullptr, bool is_active = true);
 		ARIS_DECLARE_BIG_FOUR(Constraint);
